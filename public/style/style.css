@@ -1,0 +1,4 @@
+
+.form-control.ng-valid.ng-valid-required.ng-touched.ng-empty{
+  border: 1.5px solid #a94442 !important;
+}

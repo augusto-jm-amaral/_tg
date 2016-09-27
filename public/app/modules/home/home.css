@@ -1,0 +1,15 @@
+div, input{
+  border-radius: 0px !important;
+}
+
+.home-container {
+  margin-top: 8% !important;
+}
+
+input {
+  margin-bottom: 3%;
+}
+
+input.btn {
+  float: right;
+}
