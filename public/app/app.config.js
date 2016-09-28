@@ -10,6 +10,8 @@
 
     function config($routeProvider, $httpProvider) {
 
+      $httpProvider.interceptors.push('TokenInterceptor');
+
       $routeProvider.when('/home', {
         templateUrl: 'app/modules/home/home.html',
         // controller: 'HomeCtrl',

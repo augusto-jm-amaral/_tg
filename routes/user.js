@@ -1,4 +1,5 @@
-var jwt = require('jwt-simple');
+var bcrypt = require('bcrypt-nodejs'),
+ jwt = require('jwt-simple');
 
 module.exports = function(app) {
 
@@ -47,16 +48,22 @@ module.exports = function(app) {
             Users.findOne({
                 email: email
             }, function(err, user) {
+
+              console.log(user);
+
                 if (user && !err) {
-                    if (user.validPass(user.pass, pass)) {
+                    if (bcrypt.compareSync(pass, user.pass)) {
+
                         const playload = {
-                            _id: usuario._id
+                            _id: user._id
                         };
-                        res.json({
+
+                        res.status(200).json({
                             token: jwt.encode(playload, cfg.secret),
-                            name: usuario.name,
-                            _id: usuario._id
+                            name: user.name,
+                            _id: user._id
                         }).end();
+
                     } else {
                         res.sendStatus(400).end();
                     }

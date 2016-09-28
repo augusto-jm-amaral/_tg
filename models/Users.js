@@ -57,9 +57,9 @@ module.exports = function(app) {
         }
     });
 
-    schema.method('validPass', function(encodedPassword, password) {
-        return bcrypt.compareSync(password, encodedPassword);
-    });
+    // schema.method('validPass', function(encodedPassword, password) {
+    //     return bcrypt.compareSync(password, encodedPassword);
+    // });
 
     schema.pre('save', function (next) {
 

@@ -32,6 +32,7 @@
         vm.logar = function() {
 
           if(vm.formEntrar.$valid){
+            console.log(vm.login);
             user.login(vm.login);
           }else{
             toaster.pop({

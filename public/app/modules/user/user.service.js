@@ -15,11 +15,15 @@
       this.user = ($window.sessionStorage.user ? $window.sessionStorage.nome : {});
 
       vm.login = function (user) {
-        $http.post(vm.resource + '/login')
+
+        $http.post(vm.resource + '/login', user)
           .then(function (res) {
+
+            this.user = {};
 
             this.user.name = res.data.name;
             this.user._id = res.data._id;
+            $window.sessionStorage.user = res.data;
             $window.sessionStorage.token = res.data.token;
             $location.path = '/dash';
 
