@@ -1,7 +1,8 @@
 module.exports = function(app) {
 
     const UserTypes = app.models.UserTypes;
-    const ProductTypes = app.models.ProductTypes;
+    const Vendas = app.models.Vendas;
+    const Produtos = app.models.Produtos;
 
     // console.log(UserTypes);
 
@@ -41,40 +42,9 @@ module.exports = function(app) {
                     });
 
             },
-
-            // Insert ProductTypes
-            ProductTypes: function() {
-
-                ProductTypes.findOne({
-                        name: 'Sapatos'
-                    })
-                    .then(function(productTypes) {
-
-                      if(!productTypes){
-                        new ProductTypes({
-                          name: 'Sapatos',
-                          desc: 'Tênis, Sandalhas, etc...',
-                          order: 1
-                        }).save();
-                      }
-
-                    });
-
-                ProductTypes.findOne({
-                        name: 'Roupas'
-                    })
-                    .then(function(productTypes) {
-
-                      if(!productTypes){
-                        new ProductTypes({
-                          name: 'Roupas',
-                          desc: 'Blusas, calças, shorts, etc...',
-                          order: 1
-                        }).save();
-                      }
-
-                    });
-
+            ClearDb: function  () {
+              app.models.Produtos.remove({}).exec();
+              app.models.Vendas.remove({}).exec();
             }
         }
         return clazz;

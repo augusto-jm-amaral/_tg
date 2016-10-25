@@ -12,20 +12,20 @@
       var vm = this;
       vm.resource = '/users';
 
-      this.user = ($window.sessionStorage.user ? $window.sessionStorage.nome : {});
+      vm.user = ($window.sessionStorage.user ? $window.sessionStorage.user : {});
 
       vm.login = function (user) {
 
         $http.post(vm.resource + '/login', user)
           .then(function (res) {
 
-            this.user = {};
+            vm.user = {};
 
-            this.user.name = res.data.name;
-            this.user._id = res.data._id;
+            vm.user.name = res.data.name;
+            vm.user._id = res.data._id;
             $window.sessionStorage.user = res.data;
             $window.sessionStorage.token = res.data.token;
-            $location.path = '/dash';
+            $location.path('/dash');
 
           }).catch(function (err) {
 
@@ -42,7 +42,7 @@
       vm.logout = function () {
         delete $window.sessionStorage.token;
         $window.sessionStorage.user = {};
-        $location.path = '/home';
+        $location.path('/home');
       };
 
       vm.create =  function (user) {

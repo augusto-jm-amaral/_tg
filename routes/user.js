@@ -49,7 +49,7 @@ module.exports = function(app) {
                 email: email
             }, function(err, user) {
 
-              console.log(user);
+              // console.log(user);
 
                 if (user && !err) {
                     if (bcrypt.compareSync(pass, user.pass)) {

@@ -4,33 +4,32 @@ module.exports = function(app) {
     var Schema = mongoose.Schema;
 
     var schema = new Schema({
-        name: {
-            type: String,
-            required: true
-        },
-        desc: {
-            type: String,
-            required: true
-        },
-        value: {
-            type: Number,
-            required: true
-        },
-        type: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'ProductTypes',
-            required: true
-        },
-        photos: {
+        produtos: {
               type: [{
                   type: mongoose.Schema.Types.ObjectId,
-                  ref: 'Photos'
+                  ref: 'Produtos'
               }]
+        },
+        isbn:{
+          type: Number,
+          required: true,
+          index: {
+            unique: true
+          }
+        },
+        value: {
+          type: Number,
+          required: true,
+          default: 0
         },
         user: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Users',
             required: true
+        },
+        cpfUserBuy: {
+          type: Number,
+          required: true
         },
         register: {
           type: Date,
@@ -44,5 +43,5 @@ module.exports = function(app) {
         }
     });
 
-    return mongoose.model('Products', schema);
+    return mongoose.model('Vendas', schema);
 };

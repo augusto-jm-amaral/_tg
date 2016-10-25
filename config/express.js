@@ -18,7 +18,7 @@ module.exports = function() {
         .into(app);
 
     app.utils.Populate.UserTypes();
-    app.utils.Populate.ProductTypes();
+    // app.utils.Populate.ClearDb();
 
     return app;
 };

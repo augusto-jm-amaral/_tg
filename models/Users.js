@@ -23,6 +23,9 @@ module.exports = function(app) {
         cnpj: {
           type: Number
         },
+        cpf: {
+          type: Number
+        },
         pass: {
             type: String,
             required: true

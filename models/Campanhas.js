@@ -4,7 +4,7 @@ module.exports = function(app) {
     var Schema = mongoose.Schema;
 
     var schema = new Schema({
-        name: {
+        nome: {
             type: String,
             required: true
         },
@@ -12,11 +12,16 @@ module.exports = function(app) {
             type: String,
             required: true
         },
-        products: {
-              type: [{
+        views: {
+            type: Number,
+            required: true,
+            default: 0
+        },
+        produto: {
+              // type: [{
                   type: mongoose.Schema.Types.ObjectId,
-                  ref: 'Products'
-              }]
+                  ref: 'Produtos'
+              // }]
         },
         user: {
             type: mongoose.Schema.Types.ObjectId,
@@ -35,5 +40,5 @@ module.exports = function(app) {
         }
     });
 
-    return mongoose.model('Campaigns', schema);
+    return mongoose.model('Campanhas', schema);
 };

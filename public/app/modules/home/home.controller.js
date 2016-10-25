@@ -16,7 +16,7 @@
         vm.login = {};
 
         vm.cadastrar = function() {
-          console.log(vm.formCadastrar.$valid);
+          // console.log(vm.formCadastrar.$valid);
             if (vm.formCadastrar.$valid) {
                 user.create(vm.cadastro);
             } else {
@@ -32,7 +32,7 @@
         vm.logar = function() {
 
           if(vm.formEntrar.$valid){
-            console.log(vm.login);
+            // console.log(vm.login);
             user.login(vm.login);
           }else{
             toaster.pop({

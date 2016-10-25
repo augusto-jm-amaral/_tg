@@ -18,6 +18,13 @@
         access: {
           loginRiquided: false
         }
+      })
+      .when('/dash', {
+        templateUrl: 'app/modules/dash/dash.html',
+        // controller: 'HomeCtrl',
+        access: {
+          loginRiquided: false
+        }
       });
 
       $routeProvider.otherwise({redirectTo: '/home'});
