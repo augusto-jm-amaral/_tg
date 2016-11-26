@@ -1,0 +1,54 @@
+[
+    {
+        "isbn": 123456789,
+        "cpfComprador": 42024379840,
+        "produtos": [
+            {
+                "isbn": 321654987,
+                "nome": "Sapato Bom Sapato",
+                "desc": "Sapato muito requintado",
+                "tipo": "Sapato Social",
+                "valor": 35,
+                "qtd": 2,
+                "tamanho": "39",
+                "cor": "Rosa"
+            },
+            {
+                "isbn": 321654988,
+                "nome": "Sadalha de Moisés",
+                "desc": "Uma relíquia!",
+                "tipo": "Sandalha",
+                "valor": 50,
+                "qtd": 1,
+                "tamanho": "31",
+                "cor": "Marrom"
+            }
+        ]
+    },
+    {
+        "isbn": 123456755,
+        "cpfComprador": 42024379831,
+        "produtos": [
+            {
+                "isbn": 321654987,
+                "nome": "Sapato Bom Sapato",
+                "desc": "Sapato muito requintado",
+                "tipo": "Sapato Social",
+                "valor": 35,
+                "qtd": 1,
+                "tamanho": "39",
+                "cor": "Rosa"
+            },
+            {
+                "isbn": 321654933,
+                "nome": "Sadalha Feliz",
+                "desc": "Compre essa sandalha e fique feliz!",
+                "tipo": "Sandalha",
+                "valor": 20,
+                "qtd": 3,
+                "tamanho": "32",
+                "cor": "Marrom"
+            }
+        ]
+    }
+]

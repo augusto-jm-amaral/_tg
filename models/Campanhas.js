@@ -20,7 +20,8 @@ module.exports = function(app) {
         produto: {
               // type: [{
                   type: mongoose.Schema.Types.ObjectId,
-                  ref: 'Produtos'
+                  ref: 'Produtos',
+                  required: true
               // }]
         },
         user: {

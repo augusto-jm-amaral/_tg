@@ -15,7 +15,7 @@ module.exports = function(app) {
         .all(app.utils.Auth.authenticate('usuario'))
         .post(function  (req, res) {
 
-            // console.log(req.body);
+            console.log(req.body);
             // Produtos.findOne({
             //     isbn: req.body.produto.isbn
             // }).then(function  (produto) {
@@ -23,7 +23,7 @@ module.exports = function(app) {
                 new Campanhas({
                     nome: req.body.nome,
                     desc: req.body.desc,
-                    produto: req.body.produto._id,
+                    produto: req.body.produto,
                     user: req.user._id
                 }).save(function  (err, campanha) {
                    if(err){
