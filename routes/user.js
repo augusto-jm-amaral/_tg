@@ -17,12 +17,42 @@ module.exports = function(app) {
                 .then(function(userType) {
 
                     new Users({
-                            name: req.body.proprietario,
-                            empresa: req.body.empresa,
-                            pass: req.body.password,
-                            cnpj: req.body.cnpj,
-                            email: req.body.email,
-                            type: userType._id
+                      name: req.body.proprietario,
+                      empresa: req.body.empresa,
+                      pass: req.body.password,
+                      cnpj: req.body.cnpj,
+                      email: req.body.email,
+                      type: userType._id
+                        })
+                        .save(function(err, usuario) {
+                            if (!err) {
+                                res.status(200).json(usuario).end();
+                            } else {
+                                console.log(err);
+                                res.sendStatus(400).end();
+                            }
+                        });
+                }).catch(function(err) {
+                    console.log(err);
+                    res.sendStatus(412).end();
+                });
+
+        });
+
+    app.route(service + '/consumidor')
+        .post(function(req, res) {
+
+            UserTypes.findOne({
+                    name: 'Consumidor'
+                })
+                .then(function(userType) {
+
+                    new Users({
+                      name: req.body.nome,
+                      pass: req.body.senha,
+                      cpf: req.body.cpf,
+                      email: req.body.email,
+                      type: userType._id
                         })
                         .save(function(err, usuario) {
                             if (!err) {
@@ -42,14 +72,14 @@ module.exports = function(app) {
     app.route(service + '/login')
         .post(function get(req, res) {
 
+            console.log(1);
+
             var email = req.body.email;
             var pass = req.body.password;
 
             Users.findOne({
                 email: email
             }, function(err, user) {
-
-              // console.log(user);
 
                 if (user && !err) {
                     if (bcrypt.compareSync(pass, user.pass)) {

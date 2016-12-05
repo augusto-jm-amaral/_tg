@@ -7,6 +7,10 @@ module.exports = function() {
 
     var app = express();
 
+    var cors = require('cors')
+
+    app.use(cors());
+
     app.use(bodyParser.json());
     app.use(express.static('./public'));
     app.use(expressValidator());

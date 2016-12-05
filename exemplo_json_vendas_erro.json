@@ -1,0 +1,34 @@
+[
+    {
+        "isbn": 97252185678312,
+        "cpfComprador": 42024379840,
+        "produtos": [
+            {
+                "isbn": 321654977,
+                "nome": "Sadalha da Luz",
+                "desc": "Excelente para caminhar",
+                "tipo": "Sandalha",
+                "valor": 50,
+                "qtd": 1,
+                "tamanho": "31",
+                "cor": "Marrom"
+            }
+        ]
+    }
+    {
+        "isbn": 97252185678313,
+        "cpfComprador": 42024379831,
+        "produtos": [
+            {
+                "isbn": 321654988,
+                "nome": "Tênis Tênispé",
+                "desc": "Tênis muito macio",
+                "tipo": "Tenis",
+                "valor": 35,
+                "qtd": 2,
+                "tamanho": "39",
+                "cor": "Rosa"
+            }
+        ]
+    }
+]

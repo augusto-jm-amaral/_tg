@@ -1,6 +1,6 @@
 [
     {
-        "isbn": 123456789,
+        "isbn": 97252185678312,
         "cpfComprador": 42024379840,
         "produtos": [
             {
@@ -14,9 +14,9 @@
                 "cor": "Rosa"
             },
             {
-                "isbn": 321654988,
-                "nome": "Sadalha de Moisés",
-                "desc": "Uma relíquia!",
+                "isbn": 321654977,
+                "nome": "Sadalha da Luz",
+                "desc": "Excelente para caminhar",
                 "tipo": "Sandalha",
                 "valor": 50,
                 "qtd": 1,
@@ -26,16 +26,42 @@
         ]
     },
     {
-        "isbn": 123456755,
+        "isbn": 97252185678313,
         "cpfComprador": 42024379831,
         "produtos": [
             {
-                "isbn": 321654987,
-                "nome": "Sapato Bom Sapato",
-                "desc": "Sapato muito requintado",
-                "tipo": "Sapato Social",
+                "isbn": 321654988,
+                "nome": "Tênis Tênispé",
+                "desc": "Tênis muito macio",
+                "tipo": "Tenis",
                 "valor": 35,
-                "qtd": 1,
+                "qtd": 2,
+                "tamanho": "39",
+                "cor": "Rosa"
+            },
+            {
+                "isbn": 321654933,
+                "nome": "Sadalha Ladino",
+                "desc": "Sandalho muito leve, ideal para caminhada",
+                "tipo": "Sandalha",
+                "valor": 20,
+                "qtd": 3,
+                "tamanho": "32",
+                "cor": "Marrom"
+            }
+        ]
+    },
+    {
+        "isbn": 97252185678314,
+        "cpfComprador": 42024379831,
+        "produtos": [
+            {
+                "isbn": 321654999,
+                "nome": "Sapato Arue",
+                "desc": "Sapato de bico fino de couro.",
+                "tipo": "Sapato",
+                "valor": 125,
+                "qtd": 2,
                 "tamanho": "39",
                 "cor": "Rosa"
             },
@@ -48,6 +74,38 @@
                 "qtd": 3,
                 "tamanho": "32",
                 "cor": "Marrom"
+            }
+        ]
+    },
+    {
+        "isbn": 97252185675432,
+        "cpfComprador": 42024379830,
+        "produtos": [
+            {
+                "isbn": 321654933,
+                "nome": "Tênis Awe",
+                "desc": "Tenis para o seu dia a dia",
+                "tipo": "Tenis",
+                "valor": 99,
+                "qtd": 1,
+                "tamanho": "32",
+                "cor": "Marrom"
+            }
+        ]
+    },
+    {
+        "isbn": 97252185675411,
+        "cpfComprador": 42024379830,
+        "produtos": [
+            {
+                "isbn": 321654999,
+                "nome": "Sapato Arue",
+                "desc": "Sapato de bico fino de couro.",
+                "tipo": "Sapato",
+                "valor": 125,
+                "qtd": 1,
+                "tamanho": "39",
+                "cor": "Rosa"
             }
         ]
     }
